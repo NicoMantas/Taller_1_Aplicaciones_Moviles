@@ -1,11 +1,38 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="es">
+
 <head>
-<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <title>Ejercicio JavaScript</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- GSAP (animaciones) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+  <!-- HOWLER (sonido) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.4/howler.min.js"></script>
 </head>
-<body>
-<div id="obj"></div>
-<audio id="snd" src="sound.mp3"></audio>
-<script src="script.js"></script>
+
+<body tabindex="0">
+
+  <h1>EJERCICIO DE JAVASCRIPT</h1>
+
+  <!-- ESCENA / PAISAJE -->
+  <div id="paisaje">
+    <img id="nube" class="objeto" src="https://icons.iconarchive.com/icons/flaticonmaker/flat-style/128/cloud-icon.png">
+    <img id="bici" class="objeto" src="https://icons.iconarchive.com/icons/aha-soft/transport/128/bike-icon.png">
+    <img id="arbol" class="objeto"
+      src="https://icons.iconarchive.com/icons/google/noto-emoji-animals-nature/128/22330-deciduous-tree-icon.png">
+    <img id="sol" class="objeto" src="https://icons.iconarchive.com/icons/dapino/beach/128/sun-icon.png">
+    <img id="nevado" class="objeto"
+      src="https://icons.iconarchive.com/icons/google/noto-emoji-travel-places/512/42462-mountain-icon.png">
+    <img id="nevado2" class="objeto"
+      src="https://icons.iconarchive.com/icons/google/noto-emoji-travel-places/512/42462-mountain-icon.png">
+  </div>
+
+  <!-- SCRIPTS -->
+  <script src="anim.js"></script>
+
 </body>
+
 </html>
