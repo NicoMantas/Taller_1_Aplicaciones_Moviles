@@ -67,3 +67,18 @@
   /* Sincronizar --total con el número real de slides */
   track.style.setProperty('--total', String(total));
 })();
+
+/* Read more / Read less */
+(function () {
+  const btn = document.getElementById('read-more-btn');
+  const more = document.getElementById('description-more');
+  const label = document.querySelector('.read-more-label');
+  if (!btn || !more || !label) return;
+
+  btn.addEventListener('click', () => {
+    const expanded = btn.getAttribute('aria-expanded') === 'true';
+    btn.setAttribute('aria-expanded', !expanded);
+    more.classList.toggle('expanded', !expanded);
+    label.textContent = expanded ? 'Read more' : 'Read less';
+  });
+})();
