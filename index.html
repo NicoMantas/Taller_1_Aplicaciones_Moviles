@@ -75,7 +75,7 @@
 
                     <div class="country-selector">
                         <button class="country-btn">
-                            <i class="fas fa-flag-usa"></i>
+                            <img src="img/estados-unidos.png" alt="United States" class="flag-icon">
                         </button>
                     </div>
 
@@ -136,13 +136,6 @@
             <li><a href="#"><i class="fas fa-shopping-bag"></i> Cart <span class="mobile-cart-count">0</span></a></li>
             <li><a href="#"><i class="fas fa-flag-usa"></i> Country/Region</a></li>
             <li class="divider"></li>
-            <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
-            <li><a href="#"><i class="fas fa-gamepad"></i> Games</a></li>
-            <li><a href="#"><i class="fas fa-tv"></i> Nintendo Switch</a></li>
-            <li><a href="#"><i class="far fa-newspaper"></i> News & Events</a></li>
-            <li><a href="#"><i class="fas fa-play-circle"></i> Play Nintendo</a></li>
-            <li><a href="#"><i class="fas fa-store"></i> My Nintendo Store</a></li>
-            <li class="divider"></li>
             <li><a href="#"><i class="fas fa-search"></i> Search</a></li>
             <li><a href="#"><i class="far fa-user"></i> Log in / Sign up</a></li>
         </ul>
@@ -159,20 +152,16 @@
             </div>
             <div class="country-list">
                 <div class="country-item active">
-                    <i class="fas fa-flag-usa"></i>
+                    <img src="img/estados-unidos.png" alt="United States" class="country-flag">
                     <span>United States</span>
                     <i class="fas fa-check"></i>
                 </div>
                 <div class="country-item">
-                    <i class="fas fa-flag"></i>
-                    <span>Canada</span>
-                </div>
-                <div class="country-item">
-                    <i class="fas fa-flag"></i>
+                    <img src="img/mexico.png" alt="Mexico" class="country-flag">
                     <span>Mexico</span>
                 </div>
                 <div class="country-item">
-                    <i class="fas fa-flag"></i>
+                    <img src="img/reino-unido.png" alt="United Kingdom" class="country-flag">
                     <span>United Kingdom</span>
                 </div>
             </div>
@@ -180,11 +169,271 @@
     </div>
 
     <main>
-        <div class="content">
-            <h1>Stardew Valley for Nintendo Switch</h1>
-            <p>Welcome to the official Nintendo page for Stardew Valley on Nintendo Switch.</p>
+        <!-- Breadcrumb Navigation -->
+        <div class="breadcrumb">
+            <div class="breadcrumb-container">
+                <a href="#">Store</a>
+                <i class="fas fa-chevron-right"></i>
+                <a href="#">Games</a>
+                <i class="fas fa-chevron-right"></i>
+                <span>Stardew Valley</span>
+            </div>
+        </div>
+
+        <!-- Product Section -->
+        <div class="product-section">
+            <div class="product-container">
+                <!-- Single Column: Game Title Section with Carousel -->
+                <div class="game-title-section">
+                    <!-- Game Title -->
+                    <h1 class="game-title">Stardew Valley</h1>
+
+                    <div class="game-content-wrapper">
+                        <!-- Left: Game Images Carousel -->
+                        <div class="carousel-column">
+                            <div class="game-images-carousel">
+                                <div class="carousel-main">
+                                    <div class="carousel-slides">
+                                        <div class="carousel-slide active">
+                                            <img src="assets/Stardew_Valley_image1.avif"
+                                                alt="Stardew Valley Gameplay 1">
+                                        </div>
+                                        <div class="carousel-slide">
+                                            <img src="assets/Stardew_Valley_image2.avif"
+                                                alt="Stardew Valley Gameplay 2">
+                                        </div>
+                                        <div class="carousel-slide">
+                                            <img src="assets/Stardew_Valley_image3.avif"
+                                                alt="Stardew Valley Gameplay 3">
+                                        </div>
+                                        <div class="carousel-slide">
+                                            <img src="assets/Stardew_Valley_image4.avif"
+                                                alt="Stardew Valley Gameplay 4">
+                                        </div>
+                                        <div class="carousel-slide">
+                                            <img src="assets/Stardew_Valley_image5.avif"
+                                                alt="Stardew Valley Gameplay 5">
+                                        </div>
+                                        <div class="carousel-slide">
+                                            <img src="assets/Stardew_Valley_image6.avif"
+                                                alt="Stardew Valley Gameplay 6">
+                                        </div>
+                                        <div class="carousel-slide">
+                                            <img src="assets/Stardew_Valley_image7.avif"
+                                                alt="Stardew Valley Gameplay 7">
+                                        </div>
+                                    </div>
+                                    <button class="carousel-prev">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </button>
+                                    <button class="carousel-next">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </button>
+                                    <div class="carousel-counter">
+                                        <span id="currentSlide">1</span> / <span id="totalSlides">7</span>
+                                    </div>
+                                </div>
+                                <div class="carousel-thumbnails">
+                                    <div class="thumbnail active" data-index="0">
+                                        <img src="assets/Stardew_Valley_image1.avif" alt="Thumbnail 1">
+                                    </div>
+                                    <div class="thumbnail" data-index="1">
+                                        <img src="assets/Stardew_Valley_image2.avif" alt="Thumbnail 2">
+                                    </div>
+                                    <div class="thumbnail" data-index="2">
+                                        <img src="assets/Stardew_Valley_image3.avif" alt="Thumbnail 3">
+                                    </div>
+                                    <div class="thumbnail" data-index="3">
+                                        <img src="assets/Stardew_Valley_image4.avif" alt="Thumbnail 4">
+                                    </div>
+                                    <div class="thumbnail" data-index="4">
+                                        <img src="assets/Stardew_Valley_image5.avif" alt="Thumbnail 5">
+                                    </div>
+                                    <div class="thumbnail" data-index="5">
+                                        <img src="assets/Stardew_Valley_image6.avif" alt="Thumbnail 6">
+                                    </div>
+                                    <div class="thumbnail" data-index="6">
+                                        <img src="assets/Stardew_Valley_image7.avif" alt="Thumbnail 7">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right: Purchase Info -->
+                        <div class="info-column">
+                            <!-- Version Selection -->
+                            <div class="version-selector">
+                                <h3>Select a version</h3>
+                                <div class="version-options">
+                                    <div class="version-option">
+                                        <div class="version-radio">
+                                            <input type="radio" name="version" id="switch2">
+                                        </div>
+                                        <label for="switch2" class="version-label">
+                                            <span class="version-name">Nintendo Switch 2</span>
+                                        </label>
+                                    </div>
+                                    <div class="version-option active">
+                                        <div class="version-radio">
+                                            <input type="radio" name="version" id="switch" checked>
+                                        </div>
+                                        <label for="switch" class="version-label">
+                                            <span class="version-name">Nintendo Switch</span>
+                                        </label>
+                                    </div>
+                                    <div class="version-option">
+                                        <div class="version-radio">
+                                            <input type="radio" name="version" id="upgrade">
+                                        </div>
+                                        <label for="upgrade" class="version-label">
+                                            <span class="version-name">Upgrade Pack</span>
+                                            <span class="version-hint">What's an upgrade pack?</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Edition and Price -->
+                            <div class="edition-price-section">
+                                <div class="edition-info">
+                                    <span class="edition-label">Edition</span>
+                                    <span class="edition-value">Digital</span>
+                                </div>
+                                <div class="price-section">
+                                    <span class="price">$14.99</span>
+                                </div>
+                            </div>
+
+                            <!-- Add to Cart Button -->
+                            <div class="purchase-section">
+                                <button class="add-to-cart-btn">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    Add to Cart
+                                </button>
+                                <button class="wishlist-btn">
+                                    <i class="far fa-heart"></i>
+                                    Add to Wish List
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Game Info Section (below) -->
+                <div class="game-info-section">
+                    <!-- Download Info -->
+                    <div class="download-info">
+                        <div class="download-header">
+                            <i class="fas fa-download"></i>
+                            <h3>Direct download</h3>
+                        </div>
+                        <p>This item will be sent to your system automatically after purchase.</p>
+                    </div>
+
+                    <!-- Content Rating -->
+                    <div class="content-rating">
+                        <div class="rating-item">
+                            <strong>Fantasy Violence, Mild Blood, Mild Language, Simulated Gambling, Use of Alcohol, Use
+                                of Tobacco</strong>
+                        </div>
+                        <div class="rating-item">
+                            <strong>Users Interact</strong>
+                        </div>
+                    </div>
+
+                    <!-- Compatibility Info -->
+                    <div class="compatibility-info">
+                        <div class="compatibility-header">
+                            <i class="fas fa-tv"></i>
+                            <h3>Nintendo Switch 2 Compatibility Information</h3>
+                        </div>
+                        <p>Supported – Game behavior is consistent with Nintendo Switch.</p>
+                    </div>
+
+                    <!-- Game Metadata -->
+                    <div class="game-metadata">
+                        <div class="metadata-item">
+                            <span class="metadata-label">Publisher:</span>
+                            <span class="metadata-value">ConcernedApe</span>
+                        </div>
+                        <div class="metadata-item">
+                            <span class="metadata-label">Category:</span>
+                            <span class="metadata-value">Simulation, Role-Playing</span>
+                        </div>
+                        <div class="metadata-item">
+                            <span class="metadata-label">Release Date:</span>
+                            <span class="metadata-value">Oct 5, 2017</span>
+                        </div>
+                        <div class="metadata-item">
+                            <span class="metadata-label">No. of Players:</span>
+                            <span class="metadata-value">1 player</span>
+                        </div>
+                        <div class="metadata-item">
+                            <span class="metadata-label">Game File Size:</span>
+                            <span class="metadata-value">1.1 GB</span>
+                        </div>
+                    </div>
+
+                    <!-- Supported Languages -->
+                    <div class="languages-section">
+                        <h4>Supported Languages</h4>
+                        <div class="language-list">
+                            <span>English</span>
+                            <span>Spanish</span>
+                            <span>French</span>
+                            <span>German</span>
+                            <span>Italian</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Game Description -->
+        <div class="game-description">
+            <div class="description-container">
+                <h2>About the Game</h2>
+                <p>Stardew Valley is an open-ended country-life RPG! You've inherited your grandfather's old farm plot
+                    in Stardew Valley. Armed with hand-me-down tools and a few coins, you set out to begin your new
+                    life. Can you learn to live off the land and turn these overgrown fields into a thriving home?</p>
+                <p>It won't be easy. Ever since Joja Corporation came to town, the old ways of life have all but
+                    disappeared. The community center, once the town's most vibrant hub of activity, now lies in
+                    shambles. But the valley seems full of opportunity. With a little dedication, you might just be the
+                    one to restore Stardew Valley to greatness!</p>
+
+                <h3>Features:</h3>
+                <ul>
+                    <li>Create your own farm and grow crops, raise animals</li>
+                    <li>Customize your character and farm buildings</li>
+                    <li>Explore vast caves, encounter dangerous monsters</li>
+                    <li>Befriend the townspeople, get married and start a family</li>
+                    <li>Participate in seasonal festivals and village activities</li>
+                </ul>
+            </div>
         </div>
     </main>
+
+    <!-- Carrusel de juegos recomendados -->
+    <div class="games-carousel">
+        <div class="carousel-header">
+            <h2>Explore More Games</h2>
+            <a href="#" class="view-all">View All <i class="fas fa-chevron-right"></i></a>
+        </div>
+        <div class="carousel-container">
+            <button class="carousel-btn prev-btn">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <div class="carousel-track">
+                <!-- Los juegos se agregarán dinámicamente -->
+            </div>
+            <button class="carousel-btn next-btn">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+        <div class="carousel-dots">
+            <!-- Los puntos se agregarán dinámicamente -->
+        </div>
+    </div>
 
     <footer class="footer">
         <div class="footer-container">
