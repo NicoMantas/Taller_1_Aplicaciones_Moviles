@@ -1,24 +1,84 @@
 window.onload = init;
 
 function init() {
-    // 1. Referencias a elementos
     const campoClave = document.querySelector('.clave');
-    const teclas = document.querySelectorAll('.tecla');
+    const teclado = document.getElementById('teclado');
+    const teclas = Array.from(document.querySelectorAll('.tecla'));
+    const mensaje = document.getElementById('mensaje');
 
-    // 2. Agregar event listeners a cada tecla
+    const CLAVE_CORRECTA = "1456";
+
+    const teclasNumeros = teclas.filter(t =>
+        t.value !== 'Borrar' && t.value !== 'Aceptar'
+    );
+    const teclaBorrar = teclas.find(t => t.value === 'Borrar');
+    const teclaAceptar = teclas.find(t => t.value === 'Aceptar');
+
+    let numeros = teclasNumeros.map(t => t.value);
+
+    reasignarNumeros();
+
+    // HOVER SOBRE TODO EL TECLADO
+    teclado.addEventListener('mouseenter', () => {
+        teclasNumeros.forEach(tecla => tecla.value = '*');
+        teclaBorrar.value = '*';
+        // Aceptar NO se oculta
+    });
+
+    teclado.addEventListener('mouseleave', () => {
+        teclasNumeros.forEach(tecla => {
+            tecla.value = tecla.dataset.valorReal;
+        });
+        teclaBorrar.value = 'Borrar';
+        teclaAceptar.value = 'Aceptar';
+    });
+
+    // CLICK
     teclas.forEach(tecla => {
-        tecla.addEventListener('click', function () {
-            if (this.value === 'Borrar') {
-                // Eliminar último carácter del valor 
+        tecla.addEventListener('click', () => {
+
+            if (tecla === teclaBorrar) {
                 campoClave.value = campoClave.value.slice(0, -1);
-            } else {
-                // Agregar número al campo de la clave 
-                // concatenado con el numero ingresado actualmente
-                campoClave.value += this.value;
             }
+            else if (tecla === teclaAceptar) {
+                validarClave();
+            }
+            else {
+                if (campoClave.value.length < 4) {
+                    campoClave.value += tecla.dataset.valorReal;
+                }
+            }
+
+            reasignarNumeros();
         });
     });
 
-    console.log("Teclado virtual inicializado correctamente");
-    alert("Teclado listo para usar");
+    function validarClave() {
+        if (campoClave.value === CLAVE_CORRECTA) {
+            mensaje.textContent = "✅ Acceso concedido";
+            mensaje.style.color = "green";
+        } else {
+            mensaje.textContent = "❌ Clave incorrecta";
+            mensaje.style.color = "red";
+        }
+
+        campoClave.value = "";
+    }
+
+    function reasignarNumeros() {
+        let mezcla = [...numeros];
+
+        for (let i = mezcla.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [mezcla[i], mezcla[j]] = [mezcla[j], mezcla[i]];
+        }
+
+        teclasNumeros.forEach((tecla, index) => {
+            tecla.dataset.valorReal = mezcla[index];
+            tecla.value = mezcla[index];
+        });
+
+        teclaBorrar.value = 'Borrar';
+        teclaAceptar.value = 'Aceptar';
+    }
 }
