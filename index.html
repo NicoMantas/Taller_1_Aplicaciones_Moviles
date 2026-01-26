@@ -1,133 +1,199 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <title>
-        Stardew Valley for Nintendo Switch
-    </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stardew Valley for Nintendo Switch - Nintendo Official Site</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" sizes="16x16"
+        href="https://assets.nintendo.com/image/upload/ncom/icons/fav-icons/favicon-16x16.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Helvetica+Neue:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <!-- HEADER -->
-    <header class="main-header">
-        <div class="header-container">
+    <header class="header">
+        <nav class="header-nav">
+            <div class="header-container">
+                <!-- Logo -->
+                <div class="header-logo">
+                    <svg width="140" height="40" viewBox="0 0 140 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="140" height="40" fill="#E60012" />
+                        <text x="70" y="25" text-anchor="middle" fill="white" font-family="Arial, sans-serif"
+                            font-weight="bold" font-size="24">Nintendo</text>
+                    </svg>
+                </div>
 
-            <!-- Logo -->
-            <div class="logo">
-                Nintendo
-            </div>
-
-            <!-- Navigation -->
-            <nav class="nav">
-                <ul class="nav-list">
-                    <li class="nav-item dropdown">
-                        <a href="#">Games</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Nintendo Switch</a></li>
-                            <li><a href="#">PC</a></li>
-                            <li><a href="#">Mobile</a></li>
-                        </ul>
+                <!-- Menu Items -->
+                <ul class="header-menu">
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-compass"></i>
+                            <span>Explore</span>
+                        </a>
                     </li>
-
-                    <li class="nav-item dropdown">
-                        <a href="#">Nintendo Switch</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Consoles</a></li>
-                            <li><a href="#">Accessories</a></li>
-                        </ul>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-shopping-bag"></i>
+                            <span>Shop</span>
+                        </a>
                     </li>
-
-                    <li class="nav-item">
-                        <a href="#">News & Events</a>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-question-circle"></i>
+                            <span>Support</span>
+                        </a>
                     </li>
                 </ul>
-            </nav>
 
-            <!-- Actions -->
-            <div class="header-actions">
-                <a href="#">Support</a>
-                <a href="#">Wishlist</a>
-                <a href="#">Cart</a>
+                <!-- Right Side Actions -->
+                <div class="header-right">
+                    <div class="search-container">
+                        <button class="search-btn">
+                            <i class="fas fa-search"></i>
+                            <span>Search</span>
+                        </button>
+                    </div>
+
+                    <div class="icon-items">
+                        <a href="#" class="icon-link heart-icon">
+                            <i class="far fa-heart"></i>
+                        </a>
+                        <a href="#" class="icon-link cart-icon">
+                            <i class="fas fa-shopping-bag"></i>
+                            <span class="cart-count">0</span>
+                        </a>
+                    </div>
+
+                    <div class="auth-buttons">
+                        <button class="login-btn">
+                            <i class="far fa-user"></i>
+                            <span>Log in / Sign up</span>
+                        </button>
+                    </div>
+
+                    <div class="country-selector">
+                        <button class="country-btn">
+                            <i class="fas fa-flag-usa"></i>
+                        </button>
+                    </div>
+
+                    <button class="menu-toggle" id="menuToggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
             </div>
-
-        </div>
+        </nav>
     </header>
-    <main class="main-content">
 
-        <section class="hero">
-            <div class="hero-container">
-
-                <!-- Carrusel de imágenes -->
-                <div class="hero-carousel">
-                    <div class="carousel-viewport">
-                        <div class="carousel-track">
-                            <img src="assets/Stardew_Valley_image1.avif" alt="Stardew Valley 1">
-                            <img src="assets/Stardew_Valley_image2.avif" alt="Stardew Valley 2">
-                            <img src="assets/Stardew_Valley_image3.avif" alt="Stardew Valley 3">
-                            <img src="assets/Stardew_Valley_image4.avif" alt="Stardew Valley 4">
-                            <img src="assets/Stardew_Valley_image5.avif" alt="Stardew Valley 5">
-                            <img src="assets/Stardew_Valley_image6.avif" alt="Stardew Valley 6">
-                            <img src="assets/Stardew_Valley_image7.avif" alt="Stardew Valley 7">
-                        </div>
-                    </div>
-                    <div class="carousel-controls">
-                        <button type="button" class="carousel-btn carousel-prev" aria-label="Anterior">‹</button>
-                        <div class="carousel-dots"></div>
-                        <button type="button" class="carousel-btn carousel-next" aria-label="Siguiente">›</button>
-                    </div>
-                </div>
-
-                <!-- Información -->
-                <div class="hero-info">
-                    <span class="platform">Nintendo Switch</span>
-                    <h1>Stardew Valley</h1>
-                    <p class="price">$14.99</p>
-
-                    <button class="buy-btn">
-                        Direct download
-                    </button>
-                </div>
-
+    <!-- Promo Banner -->
+    <div class="promo-banner">
+        <div class="promo-container">
+            <div class="promo-item">
+                <i class="fas fa-shipping-fast"></i>
+                <p>Free shipping on orders $50 or more. Restrictions apply.</p>
             </div>
-        </section>
+            <div class="promo-item">
+                <i class="fas fa-gift"></i>
+                <p>Redeem your My Nintendo Platinum Points for fun rewards</p>
+            </div>
+        </div>
+    </div>
 
-        <section class="game-description">
-            <div class="description-container">
-                <div class="description-text">
-                    <p class="description-intro">
-                        You've inherited your grandfather's old farm plot in Stardew Valley. Armed with hand-me-down tools and a few coins, you set out to begin your new life. Can you learn to live off the land and turn these overgrown fields into a thriving home? It won't be easy. Ever since Joja Corporation came to town, the old ways of life have all but disappeared. The community center, once the town's most vibrant hub of activity, now lies in shambles. But the valley seems full of opportunity. With a little dedication, you might just be the one to restore Stardew Valley to greatness!
-                    </p>
-                    <div class="description-more" id="description-more">
-                        <p>
-                            Now with Multiplayer! Invite 1-3 players to join you in the valley! Players can work together to build a thriving farm, share resources, and build relationships with townspeople or each other. As more hands are better, you'll be able to achieve much more together. Work, fish, fight monsters, and explore the valley side by side—the choice is yours.
-                        </p>
-                    </div>
-                    <button type="button" class="read-more-btn" id="read-more-btn" aria-expanded="false">
-                        <span class="read-more-icon" aria-hidden="true">+</span>
-                        <span class="read-more-label">Read more</span>
-                    </button>
+    <!-- Search Overlay -->
+    <div class="search-overlay" id="searchOverlay">
+        <div class="search-modal">
+            <div class="search-header">
+                <h3>Search Nintendo.com</h3>
+                <button class="close-search" id="closeSearch">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="search-input-wrapper">
+                <div class="search-input">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search games, systems, support, etc.">
                 </div>
-                <div class="description-image">
-                    <img src="assets/Stardew_Valley_image1.avif" alt="Stardew Valley - Logo y paisaje">
+                <button class="search-submit">Search</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <div class="mobile-logo">Nintendo</div>
+            <button class="close-menu" id="closeMenu">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <ul class="mobile-nav">
+            <li><a href="#"><i class="fas fa-compass"></i> Explore</a></li>
+            <li><a href="#"><i class="fas fa-shopping-bag"></i> Shop</a></li>
+            <li><a href="#"><i class="fas fa-question-circle"></i> Support</a></li>
+            <li><a href="#"><i class="far fa-heart"></i> Wishlist</a></li>
+            <li><a href="#"><i class="fas fa-shopping-bag"></i> Cart <span class="mobile-cart-count">0</span></a></li>
+            <li><a href="#"><i class="fas fa-flag-usa"></i> Country/Region</a></li>
+            <li class="divider"></li>
+            <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="#"><i class="fas fa-gamepad"></i> Games</a></li>
+            <li><a href="#"><i class="fas fa-tv"></i> Nintendo Switch</a></li>
+            <li><a href="#"><i class="far fa-newspaper"></i> News & Events</a></li>
+            <li><a href="#"><i class="fas fa-play-circle"></i> Play Nintendo</a></li>
+            <li><a href="#"><i class="fas fa-store"></i> My Nintendo Store</a></li>
+            <li class="divider"></li>
+            <li><a href="#"><i class="fas fa-search"></i> Search</a></li>
+            <li><a href="#"><i class="far fa-user"></i> Log in / Sign up</a></li>
+        </ul>
+    </div>
+
+    <!-- Country Selector Modal -->
+    <div class="country-modal" id="countryModal">
+        <div class="country-modal-content">
+            <div class="country-modal-header">
+                <h3>Select your country/region</h3>
+                <button class="close-country" id="closeCountry">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="country-list">
+                <div class="country-item active">
+                    <i class="fas fa-flag-usa"></i>
+                    <span>United States</span>
+                    <i class="fas fa-check"></i>
+                </div>
+                <div class="country-item">
+                    <i class="fas fa-flag"></i>
+                    <span>Canada</span>
+                </div>
+                <div class="country-item">
+                    <i class="fas fa-flag"></i>
+                    <span>Mexico</span>
+                </div>
+                <div class="country-item">
+                    <i class="fas fa-flag"></i>
+                    <span>United Kingdom</span>
                 </div>
             </div>
-        </section>
+        </div>
+    </div>
 
+    <main>
+        <div class="content">
+            <h1>Stardew Valley for Nintendo Switch</h1>
+            <p>Welcome to the official Nintendo page for Stardew Valley on Nintendo Switch.</p>
+        </div>
     </main>
 
-    <!-- FOOTER -->
-    <footer class="main-footer">
+    <footer class="footer">
         <div class="footer-container">
-            <p>© Nintendo.</p>
+            <div class="footer-section">
+                <h3>Stardew Valley for Nintendo Switch - Nintendo Official Site</h3>
+                <p>© 2023 Nintendo. Games are property of their respective owners.</p>
+            </div>
         </div>
     </footer>
-
-    <div class="lightbox" id="lightbox">
-        <img id="lightbox-img" alt="Vista ampliada">
-    </div>
 
     <script src="script.js"></script>
 </body>
