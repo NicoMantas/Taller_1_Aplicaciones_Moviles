@@ -169,24 +169,20 @@
     </div>
 
     <main>
-        <!-- Breadcrumb Navigation -->
-        <div class="breadcrumb">
-            <div class="breadcrumb-container">
-                <a href="#">Store</a>
-                <i class="fas fa-chevron-right"></i>
-                <a href="#">Games</a>
-                <i class="fas fa-chevron-right"></i>
-                <span>Stardew Valley</span>
-            </div>
-        </div>
 
         <!-- Product Section -->
         <div class="product-section">
             <div class="product-container">
                 <!-- Single Column: Game Title Section with Carousel -->
                 <div class="game-title-section">
-                    <!-- Game Title -->
-                    <h1 class="game-title">Stardew Valley</h1>
+                    <!-- Breadcrumb Navigation -->
+                    <div class="breadcrumb-container">
+                        <a href="#">Store</a>
+                        <i class="fas fa-chevron-right"></i>
+                        <a href="#">Games</a>
+                        <i class="fas fa-chevron-right"></i>
+                        <span>Stardew Valley</span>
+                    </div>
 
                     <div class="game-content-wrapper">
                         <!-- Left: Game Images Carousel -->
@@ -263,6 +259,8 @@
                         <div class="info-column">
                             <!-- Version Selection -->
                             <div class="version-selector">
+                                <!-- Game Title -->
+                                <h1 class="game-title">Stardew Valley</h1>
                                 <h3>Select a version</h3>
                                 <div class="version-options">
                                     <div class="version-option">
@@ -287,17 +285,17 @@
                                         </div>
                                         <label for="upgrade" class="version-label">
                                             <span class="version-name">Upgrade Pack</span>
-                                            <span class="version-hint">What's an upgrade pack?</span>
                                         </label>
                                     </div>
                                 </div>
-                            </div>
+                                <span class="version-hint">What's an upgrade pack?</span>
 
-                            <!-- Edition and Price -->
-                            <div class="edition-price-section">
+                                <!-- Edition and Price -->
                                 <div class="edition-info">
                                     <span class="edition-label">Edition</span>
-                                    <span class="edition-value">Digital</span>
+                                    <div class="edition-value-section">
+                                        <span class="edition-value">Digital</span>
+                                    </div>
                                 </div>
                                 <div class="price-section">
                                     <span class="price">$14.99</span>

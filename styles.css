@@ -29,6 +29,7 @@ body {
   padding: 0 20px;
   margin-left: -24px;
   height: 70px;
+  justify-content: space-between;
 }
 
 .header-logo svg {
@@ -39,11 +40,11 @@ body {
 .header-container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 0;
 }
+
 
 /* Menu Items */
 .header-menu {
@@ -116,6 +117,8 @@ body {
   position: relative;
   transition: color 0.2s;
   padding: 8px;
+  border-radius: 15px;
+  background: linear-gradient(135deg, #f9f9f9 0%, #f0f0f0 100%);
 }
 
 .icon-link:hover {
@@ -151,6 +154,10 @@ body {
   display: flex;
   align-items: center;
   gap: 15px;
+  justify-content: space-between;
+  margin-left: auto;
+
+
 }
 
 /* Country Selector */
@@ -195,15 +202,15 @@ body {
   display: flex;
   align-items: center;
   gap: 8px;
-  background: none;
   border: 1px solid #d0d0d0;
-  border-radius: 4px;
+  border-radius: 35px;
   padding: 8px 16px;
   color: #666;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 600;
   cursor: pointer;
   transition: all 0.2s;
+  background: linear-gradient(135deg, #f9f9f9 0%, #f0f0f0 100%);
 }
 
 .search-btn:hover {
@@ -227,7 +234,7 @@ body {
   gap: 8px;
   background: none;
   border: 1px solid #E60012;
-  border-radius: 4px;
+  border-radius: 25px;
   padding: 8px 16px;
   color: #E60012;
   font-size: 14px;
@@ -593,7 +600,7 @@ body {
   margin-bottom: 40px;
   font-weight: 800;
   line-height: 1.1;
-  text-align: center;
+  text-align: left;
 }
 
 /* MODIFICACIÓN PRINCIPAL: Cambiar a flexbox para mejor control */
@@ -771,7 +778,8 @@ body {
 
 .version-options {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   gap: 15px;
 }
 
@@ -779,7 +787,7 @@ body {
   display: flex;
   align-items: center;
   gap: 18px;
-  padding: 20px 22px;
+  padding: 13px 22px;
   border: 3px solid #e8e8e8;
   border-radius: 12px;
   cursor: pointer;
@@ -851,47 +859,60 @@ body {
 
 .version-hint {
   font-size: 15px;
-  color: #888;
-  font-style: italic;
+  color: #e60012;
+  font-style: normal;
+  text-decoration: underline;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-top: 0.75rem;
 }
 
 /* Edition and Price */
-.edition-price-section {
+.edition-value-section {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 30px;
-  border: 2px solid #eee;
+  justify-content: flex-start;
+  align-content: center;
+  padding: 15px;
   border-radius: 14px;
   margin: 20px 0;
   background: linear-gradient(135deg, #f9f9f9 0%, #f0f0f0 100%);
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin-right: auto;
+
 }
 
 .edition-info {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 10px;
+  align-items: center;
+
 }
 
 .edition-label {
-  color: #777;
+  display: inline-block;
+  color: #353535;
   font-size: 18px;
   font-weight: 500;
   letter-spacing: 0.5px;
+  font-weight: bold;
+  white-space: nowrap;
+
 }
 
 .edition-value {
   color: #333;
-  font-size: 24px;
-  font-weight: 700;
+  font-size: 17px;
+  font-weight: 150;
 }
 
 .price-section .price {
-  font-size: 56px;
-  font-weight: 900;
-  color: #E60012;
+  font-size: 45px;
+  font-weight: 700;
+  color: #525252;
   letter-spacing: -2px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* Purchase Section */
@@ -1394,6 +1415,7 @@ body {
 
   .game-title {
     font-size: 40px;
+
   }
 
   .price-section .price {
@@ -1543,11 +1565,14 @@ body {
     font-size: 20px;
   }
 
-  .edition-price-section {
-    flex-direction: column;
-    gap: 25px;
-    align-items: flex-start;
-    padding: 25px;
+  .edition-value-section {
+    display: flex;
+    align-items: center;
+    padding: 8px 15px;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    border: 1px solid #e0e0e0;
+    min-width: 100px;
   }
 
   .game-info-section {
