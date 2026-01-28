@@ -204,34 +204,31 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Wishlist functionality
   const heartIcon = document.querySelector('.heart-icon');
-  const wishlistBtn = document.querySelector('.wishlist-btn');
-  const heartIconProduct = wishlistBtn?.querySelector('i');
-
-  const toggleWishlist = (element, showAlert = false) => {
-    const heartIconElement = element.querySelector('i');
-    if (heartIconElement.classList.contains('far')) {
-      heartIconElement.classList.remove('far');
-      heartIconElement.classList.add('fas');
-      heartIconElement.style.color = '#E60012';
-      if (showAlert) alert('Added to Wish List!');
-    } else {
-      heartIconElement.classList.remove('fas');
-      heartIconElement.classList.add('far');
-      heartIconElement.style.color = '#333';
-      if (showAlert) alert('Removed from Wish List!');
-    }
-  };
+  const heartIconPrize = document.querySelector('.heart-icon-prize');
 
   if (heartIcon) {
     heartIcon.addEventListener('click', function (e) {
       e.preventDefault();
-      toggleWishlist(this);
+      const icon = this.querySelector('i');
+      if (icon.classList.contains('far')) {
+        icon.classList.remove('far');
+        icon.classList.add('fas');
+        icon.style.color = '#E60012';
+      } else {
+        icon.classList.remove('fas');
+        icon.classList.add('far');
+        icon.style.color = '#333';
+      }
     });
   }
 
-  if (wishlistBtn && heartIconProduct) {
-    wishlistBtn.addEventListener('click', function () {
-      toggleWishlist(this, true);
+  if (heartIconPrize) {
+    heartIconPrize.addEventListener('click', function (e) {
+      e.preventDefault();
+      const icon = this.querySelector('i');
+      icon.classList.toggle('far');
+      icon.classList.toggle('fas');
+      this.classList.toggle('active');
     });
   }
 
@@ -487,14 +484,4 @@ document.addEventListener('DOMContentLoaded', function () {
       initCarousel();
     });
   }
-}); const heart = document.querySelector('.heart-icon-prize');
-
-heart.addEventListener('click', function (e) {
-  e.preventDefault(); // Evita que el enlace recargue la página
-  const icon = this.querySelector('i');
-
-  // Alternar entre contorno y relleno
-  icon.classList.toggle('far'); // contorno
-  icon.classList.toggle('fas'); // relleno
-  this.classList.toggle('active'); // cambia color
 });

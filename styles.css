@@ -45,7 +45,6 @@ body {
   padding: 0 0;
 }
 
-
 /* Menu Items */
 .header-menu {
   display: flex;
@@ -389,8 +388,6 @@ body {
   gap: 15px;
   justify-content: space-between;
   margin-left: auto;
-
-
 }
 
 /* Country Selector */
@@ -769,12 +766,6 @@ body {
 }
 
 /* Breadcrumb Navigation */
-.breadcrumb {
-  background-color: #f8f8f8;
-  border-bottom: 1px solid #e0e0e0;
-  padding: 15px 0;
-}
-
 .breadcrumb-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -785,23 +776,23 @@ body {
   font-size: 14px;
 }
 
-.breadcrumb a {
+.breadcrumb-container a {
   color: #666;
   text-decoration: none;
   transition: color 0.2s;
   font-weight: 500;
 }
 
-.breadcrumb a:hover {
+.breadcrumb-container a:hover {
   color: #E60012;
 }
 
-.breadcrumb i {
+.breadcrumb-container i {
   color: #999;
   font-size: 10px;
 }
 
-.breadcrumb span {
+.breadcrumb-container span {
   color: #333;
   font-weight: 600;
 }
@@ -846,9 +837,7 @@ body {
 /* Columna de información - tamaño más compacto */
 .info-column {
   flex: 1;
-  /* Ocupa espacio proporcional */
   min-width: 380px;
-  /* Ancho mínimo para buena legibilidad */
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -857,9 +846,7 @@ body {
 /* Carrusel - tamaño más equilibrado */
 .carousel-column {
   flex: 1.2;
-  /* Un poco más grande que la info */
   min-width: 0;
-  /* Para que no se desborde */
 }
 
 .game-images-carousel {
@@ -868,7 +855,6 @@ body {
 
 .carousel-main {
   height: 450px;
-  /* Altura reducida para mejor proporción */
   margin-bottom: 20px;
   border-radius: 14px;
   overflow: hidden;
@@ -900,9 +886,7 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  /* Esto cubrirá todo el espacio sin dejar blancos */
   display: block;
-  /* Elimina espacio fantasma debajo de imágenes */
 }
 
 .carousel-prev,
@@ -913,7 +897,6 @@ body {
   background-color: rgba(255, 255, 255, 0.95);
   border: none;
   width: 44px;
-  /* Botones un poco más pequeños */
   height: 44px;
   border-radius: 50%;
   display: flex;
@@ -985,7 +968,6 @@ body {
 
 .thumbnail.active {
   border-color: #e60012;
-  /* Rojo Nintendo */
 }
 
 .thumbnail img {
@@ -1112,7 +1094,6 @@ body {
   flex-wrap: wrap;
   flex-direction: row;
   margin-right: auto;
-
 }
 
 .edition-info {
@@ -1120,7 +1101,6 @@ body {
   flex-direction: row;
   gap: 10px;
   align-items: center;
-
 }
 
 .edition-label {
@@ -1131,7 +1111,6 @@ body {
   letter-spacing: 0.5px;
   font-weight: bold;
   white-space: nowrap;
-
 }
 
 .edition-value {
@@ -1164,8 +1143,7 @@ body {
   margin-top: 10px;
 }
 
-.add-to-cart-btn,
-.wishlist-btn {
+.add-to-cart-btn {
   border: none;
   border-radius: 12px;
   padding: 25px 40px;
@@ -1178,9 +1156,6 @@ body {
   transition: all 0.3s;
   text-transform: none;
   letter-spacing: 1px;
-}
-
-.add-to-cart-btn {
   background-color: #E60012;
   color: white;
   font-size: 22px;
@@ -1193,167 +1168,106 @@ body {
   box-shadow: 0 15px 35px rgba(230, 0, 18, 0.4);
 }
 
-.wishlist-btn {
-  background-color: white;
-  color: #333;
-  font-size: 20px;
-  border: 3px solid #e0e0e0;
-}
-
-.wishlist-btn:hover {
-  border-color: #E60012;
-  color: #E60012;
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-}
-
-/* Game Info Section (below) */
-.game-info-section {
-  background: white;
-  border-radius: 16px;
-  padding: 40px;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+/* Para la Opción 1 */
+.main-content-column {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  flex: 1;
 }
 
-/* Download Info & Compatibility Info */
-.download-info,
-.compatibility-info {
-  background-color: #f0f7ff;
-  border-radius: 12px;
-  padding: 25px;
+/* Estilos específicos para el contenido de la imagen */
+.esrb-info-section {
+  margin-top: 25px;
 }
 
-.download-info {
-  border-left: 6px solid #0073e6;
-}
-
-.compatibility-info {
-  border-left: 6px solid #00a8ff;
-}
-
-.download-header,
-.compatibility-header {
+.esrb-main-info {
   display: flex;
-  align-items: center;
   gap: 15px;
+  align-items: flex-start;
   margin-bottom: 15px;
 }
 
-.download-header i {
-  color: #0073e6;
-  font-size: 24px;
+.esrb-icon-container {
+  width: 50px;
+  height: auto;
+  flex-shrink: 0;
+  display: flex;
+  align-items: flex-start;
+  padding-top: 5px;
 }
 
-.compatibility-header i {
-  color: #00a8ff;
-  font-size: 24px;
+.esrb-icon-container img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
-.download-header h3,
-.compatibility-header h3 {
-  font-size: 22px;
-  color: #333;
-  font-weight: 700;
-}
-
-.download-info p,
-.compatibility-info p {
-  color: #555;
-  line-height: 1.7;
-  font-size: 17px;
-  margin: 0;
-  font-weight: 500;
-}
-
-/* Content Rating */
-.content-rating,
-.game-metadata,
-.languages-section {
-  padding: 25px;
-  background-color: #f8f8f8;
-  border-radius: 12px;
-  border: 2px solid #eee;
-}
-
-.content-rating {
+.esrb-text-content {
+  flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 10px;
 }
 
-.rating-item {
-  color: #333;
-  line-height: 1.6;
-  font-size: 16px;
-  padding: 8px 0;
-}
-
-/* Game Metadata */
-.game-metadata {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.metadata-item {
-  display: flex;
-  justify-content: space-between;
-  padding: 12px 0;
-  border-bottom: 1px solid #e8e8e8;
-}
-
-.metadata-item:last-child {
-  border-bottom: none;
-}
-
-.metadata-label {
+.esrb-description {
+  font-size: 14px;
   color: #666;
+  line-height: 1.5;
+  margin: 0 0 5px 0;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #eee;
+}
+
+.users-interact-simple {
+  margin-top: 0;
+  padding-top: 2px;
+}
+
+.users-interact-label {
+  font-size: 14px;
   font-weight: 600;
-  font-size: 16px;
+  color: #495057;
 }
 
-.metadata-value {
-  color: #333;
-  font-weight: 700;
-  text-align: right;
-  font-size: 16px;
+/* Opcional: Si quieres agregar un ícono más sutil */
+.users-interact-label::before {
+  content: "";
+  display: none;
 }
 
-/* Languages */
-.languages-section h4 {
-  font-size: 22px;
-  color: #333;
-  margin-bottom: 20px;
-  font-weight: 700;
-  padding-bottom: 15px;
-  border-bottom: 2px solid #ddd;
-}
-
-.language-list {
+/* Nuevos estilos para compatibilidad */
+.compatibility-section {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 16px;
   display: flex;
-  flex-wrap: wrap;
   gap: 15px;
+  align-items: flex-start;
 }
 
-.language-list span {
-  background-color: white;
-  color: #333;
-  padding: 12px 24px;
-  border-radius: 30px;
-  border: 2px solid #e0e0e0;
-  font-size: 16px;
+.compatibility-icon {
+  color: #0d6efd;
+  font-size: 22px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.compatibility-content {
+  flex: 1;
+}
+
+.compatibility-title {
+  font-size: 15px;
   font-weight: 600;
-  transition: all 0.3s;
+  color: #333;
+  margin: 0 0 6px 0;
+  line-height: 1.3;
 }
 
-.language-list span:hover {
-  border-color: #E60012;
-  color: #E60012;
-  transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+.compatibility-text {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+  line-height: 1.4;
 }
 
 /* Game Description */
@@ -1633,13 +1547,11 @@ body {
 
   .game-content-wrapper {
     flex-direction: column;
-    /* Apilar en pantallas medianas */
     gap: 40px;
   }
 
   .info-column {
     min-width: 100%;
-    /* Ocupar todo el ancho */
   }
 
   .carousel-column {
@@ -1656,7 +1568,6 @@ body {
 
   .game-title {
     font-size: 40px;
-
   }
 
   .price-section .price {
@@ -1800,8 +1711,7 @@ body {
     font-size: 40px;
   }
 
-  .add-to-cart-btn,
-  .wishlist-btn {
+  .add-to-cart-btn {
     padding: 20px 30px;
     font-size: 20px;
   }
@@ -1814,10 +1724,6 @@ body {
     border-radius: 4px;
     border: 1px solid #e0e0e0;
     min-width: 100px;
-  }
-
-  .game-info-section {
-    padding: 30px;
   }
 
   .carousel-item {
@@ -1892,21 +1798,6 @@ body {
     font-size: 18px;
   }
 
-  .wishlist-btn {
-    padding: 16px 25px;
-    font-size: 18px;
-  }
-
-  .game-info-section {
-    padding: 20px;
-    gap: 20px;
-  }
-
-  .download-header h3,
-  .compatibility-header h3 {
-    font-size: 20px;
-  }
-
   .carousel-item {
     flex: 0 0 calc(100% - 0px);
   }
@@ -1925,220 +1816,4 @@ body {
     align-items: flex-start;
     gap: 10px;
   }
-}
-
-/* Para la Opción 1 */
-.main-content-column {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-}
-
-.game-info-content {
-  margin-top: 30px;
-  padding: 20px;
-  background-color: #f8f9fa;
-  border-radius: 8px;
-  border: 1px solid #e9ecef;
-}
-
-/* Para la Opción 2 */
-.game-details-section {
-  margin-top: 30px;
-  padding: 20px;
-  background-color: #f8f9fa;
-  border-radius: 8px;
-  border: 1px solid #e9ecef;
-  width: 100%;
-}
-
-/* Estilos específicos para el contenido de la imagen */
-.esrb-rating-section {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 15px;
-  padding-bottom: 15px;
-  border-bottom: 1px solid #dee2e6;
-}
-
-.esrb-header {
-  flex: 1;
-}
-
-.esrb-badge {
-  background-color: #0d6efd;
-  color: white;
-  padding: 6px 12px;
-  border-radius: 4px;
-  font-weight: bold;
-  font-size: 14px;
-  display: inline-block;
-  margin-bottom: 10px;
-}
-
-.esrb-description p {
-  margin: 0;
-  font-size: 14px;
-  color: #6c757d;
-  line-height: 1.4;
-}
-
-.esrb-organization {
-  font-size: 14px;
-  color: #495057;
-  font-weight: 500;
-}
-
-.interaction-warning {
-  margin: 15px 0;
-  padding: 8px 12px;
-  background-color: #fff3cd;
-  border: 1px solid #ffecb5;
-  border-radius: 4px;
-}
-
-.warning-label {
-  font-size: 14px;
-  color: #856404;
-  font-weight: 500;
-}
-
-.compatibility-info {
-  margin-top: 15px;
-  padding-top: 15px;
-  border-top: 1px solid #dee2e6;
-}
-
-.compatibility-info h4 {
-  font-size: 16px;
-  margin-bottom: 8px;
-  color: #343a40;
-}
-
-.compatibility-info p {
-  font-size: 14px;
-  color: #6c757d;
-  margin: 0;
-}
-
-.game-content-wrapper {
-  display: flex;
-  gap: 40px;
-  margin-top: 20px;
-}
-
-/* Para Opción 1 */
-.main-content-column {
-  flex: 1;
-}
-
-.info-column {
-  width: 350px;
-  /* Ajusta según necesites */
-}
-
-.esrb-info-section {
-  margin-top: 25px;
-}
-
-.esrb-main-info {
-  display: flex;
-  gap: 15px;
-  align-items: flex-start;
-  margin-bottom: 15px;
-}
-
-.esrb-icon-container {
-  width: 50px;
-  height: auto;
-  flex-shrink: 0;
-  display: flex;
-  align-items: flex-start;
-  padding-top: 5px;
-}
-
-.esrb-icon-container img {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-}
-
-.esrb-text-content {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-.esrb-rating-line {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 8px;
-}
-
-.esrb-description {
-  font-size: 14px;
-  color: #666;
-  line-height: 1.5;
-  margin: 0 0 5px 0;
-  /* Reducido de 15px a 10px */
-  padding-bottom: 8px;
-  /* Reducido de 15px a 10px */
-  border-bottom: 1px solid #eee;
-}
-
-.users-interact-simple {
-  margin-top: 0;
-  padding-top: 2px;
-}
-
-.users-interact-label {
-  font-size: 14px;
-  font-weight: 600;
-  color: #495057;
-}
-
-/* Opcional: Si quieres agregar un ícono más sutil */
-.users-interact-label::before {
-  content: "";
-  /* Si no quieres ningún ícono o punto, deja esto vacío */
-  display: none;
-  /* Esto oculta completamente el pseudo-elemento */
-}
-
-/* Nuevos estilos para compatibilidad */
-.compatibility-section {
-  background-color: #f8f9fa;
-  border-radius: 8px;
-  padding: 16px;
-  display: flex;
-  gap: 15px;
-  align-items: flex-start;
-}
-
-.compatibility-icon {
-  color: #0d6efd;
-  font-size: 22px;
-  flex-shrink: 0;
-  margin-top: 2px;
-}
-
-.compatibility-content {
-  flex: 1;
-}
-
-.compatibility-title {
-  font-size: 15px;
-  font-weight: 600;
-  color: #333;
-  margin: 0 0 6px 0;
-  line-height: 1.3;
-}
-
-.compatibility-text {
-  font-size: 14px;
-  color: #666;
-  margin: 0;
-  line-height: 1.4;
 }
