@@ -485,3 +485,87 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 });
+
+// ===== BARRA STICKY PARA COMPRA RÁPIDA =====
+
+const stickyBar = document.getElementById('stickyPurchaseBar');
+const stickySpacer = document.getElementById('stickySpacer');
+const addToCartBtn = document.querySelector('.add-to-cart-btn');
+const purchaseSection = document.querySelector('.purchase-section');
+const navbar = document.querySelector('.header');
+
+if (stickyBar && addToCartBtn && purchaseSection && navbar && stickySpacer) {
+  // Calcular el punto de activación (más simple)
+  const calculateActivationPoint = () => {
+    const purchaseSectionRect = purchaseSection.getBoundingClientRect();
+    const scrollY = window.scrollY;
+
+    // Distancia desde el top de la página hasta el purchaseSection
+    const purchaseSectionTop = scrollY + purchaseSectionRect.top;
+
+    // Altura del purchaseSection
+    const purchaseSectionHeight = purchaseSectionRect.height;
+
+    // Activar cuando el usuario haya pasado el 80% del purchaseSection
+    return purchaseSectionTop + (purchaseSectionHeight * 0.8);
+  };
+
+  let activationPoint = calculateActivationPoint();
+
+  // Función para verificar si se debe mostrar la barra sticky
+  const checkStickyBar = () => {
+    const scrollPosition = window.scrollY;
+
+    if (scrollPosition > activationPoint) {
+      stickyBar.classList.add('active');
+      stickySpacer.classList.add('active');
+
+      // Agregar padding al body para que el contenido no quede oculto
+      document.body.style.paddingTop = stickyBar.offsetHeight + 'px';
+    } else {
+      stickyBar.classList.remove('active');
+      stickySpacer.classList.remove('active');
+
+      // Quitar el padding cuando no hay barra sticky
+      document.body.style.paddingTop = '0';
+    }
+  };
+
+  // Evento de scroll
+  window.addEventListener('scroll', checkStickyBar);
+
+  // Recalcular en resize
+  window.addEventListener('resize', () => {
+    activationPoint = calculateActivationPoint();
+    checkStickyBar();
+  });
+
+  // Botón de compra en la barra sticky
+  const stickyAddToCartBtn = stickyBar.querySelector('.sticky-add-to-cart-btn');
+  if (stickyAddToCartBtn) {
+    stickyAddToCartBtn.addEventListener('click', function () {
+      if (cartCount && mobileCartCount) {
+        updateCartCount();
+      }
+    });
+  }
+
+  // Actualizar información si cambia la versión seleccionada
+  const versionOptions = document.querySelectorAll('.version-option');
+
+  if (versionOptions.length > 0) {
+    versionOptions.forEach(option => {
+      option.addEventListener('click', function () {
+        const platformBadge = stickyBar.querySelector('.sticky-platform-badge');
+        const versionName = this.querySelector('.version-name').textContent;
+
+        if (platformBadge) {
+          platformBadge.textContent = versionName;
+        }
+      });
+    });
+  }
+
+  // Inicializar verificación
+  checkStickyBar();
+}

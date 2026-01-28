@@ -15,8 +15,6 @@ body {
 .header {
   background-color: #ffffff;
   border-bottom: 1px solid #e0e0e0;
-  position: sticky;
-  top: 0;
   z-index: 1000;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
@@ -506,6 +504,22 @@ body {
   padding: 0 24px;
 }
 
+.promo-content {
+  color: #333;
+  font-size: 16px;
+}
+
+.promo-content strong {
+  font-weight: 600;
+  color: #494949;
+}
+
+.promo-content .underlined {
+  color: #333;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
 .promo-item {
   display: flex;
   align-items: center;
@@ -524,7 +538,7 @@ body {
 }
 
 .promo-item:first-child p {
-  color: #e60012;
+  color: #5d5d5d;
   font-weight: 600;
 }
 
@@ -768,7 +782,7 @@ body {
 /* Breadcrumb Navigation */
 .breadcrumb-container {
   max-width: 1200px;
-  margin: 0 auto;
+  margin-bottom: 12px;
   padding: 0 24px;
   display: flex;
   align-items: center;
@@ -798,11 +812,7 @@ body {
 }
 
 /* Product Section Layout */
-.product-section {
-  max-width: 1200px;
-  margin: 30px auto;
-  padding: 0 24px;
-}
+.product-section {}
 
 .product-container {
   display: flex;
@@ -813,16 +823,24 @@ body {
 /* Game Title Section (Main Section with Carousel) */
 .game-title-section {
   background: white;
-  border-radius: 16px;
   padding: 40px;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
 }
 
 .game-title {
-  font-size: 48px;
-  color: #333;
+  font-size: 30px;
+  color: #4e4e4e;
+  margin-bottom: 18px;
+  font-weight: 540;
+  line-height: 1.1;
+  text-align: left;
+}
+
+.game-subtitle {
+  font-size: 30px;
+  color: #4e4e4e;
   margin-bottom: 40px;
-  font-weight: 800;
+  font-weight: 540;
   line-height: 1.1;
   text-align: left;
 }
@@ -982,12 +1000,10 @@ body {
 }
 
 .version-selector h3 {
-  font-size: 24px;
-  margin-bottom: 25px;
-  color: #333;
+  font-size: 15px;
+  color: #4E4E4E;
   font-weight: 700;
-  border-bottom: 2px solid #eee;
-  padding-bottom: 15px;
+  padding-bottom: 10px;
 }
 
 .version-options {
@@ -1815,5 +1831,204 @@ body {
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
+  }
+}
+
+/* ===== BARRA STICKY PARA COMPRA RÁPIDA ===== */
+
+.sticky-purchase-bar {
+  position: fixed;
+  top: -100px;
+  /* Comienza oculta arriba */
+  left: 0;
+  right: 0;
+  background: #f2f2f2;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid #e0e0e0;
+  z-index: 990;
+  /* Menor que el navbar que suele tener 1000 */
+  transition: top 0.3s ease;
+  padding: 12px 0;
+}
+
+/* CAMBIA ESTO: */
+.sticky-purchase-bar.active {
+  /* Aparece justo en el top de la ventana */
+  top: 0;
+  /* ¡Cambiado de 70px a 0! */
+}
+
+.sticky-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.sticky-game-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+  min-width: 0;
+}
+
+.sticky-game-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #545454;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sticky-platform-badge {
+  background: #f0f0f0;
+  color: #666;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.sticky-price-info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.sticky-edition-price {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+  gap: 4px;
+}
+
+.sticky-edition {
+  font-size: 14px;
+  color: #666;
+  margin-right: 10px;
+
+}
+
+.sticky-price {
+  font-size: 15px;
+  font-weight: 570;
+  color: #626262;
+  margin-right: -6px;
+}
+
+.sticky-add-to-cart-btn {
+  background-color: #E60012;
+  color: white;
+  border: none;
+  border-radius: 60px;
+  padding: 12px 24px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s;
+  white-space: nowrap;
+}
+
+.sticky-add-to-cart-btn:hover {
+  background-color: #cc0010;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(230, 0, 18, 0.3);
+}
+
+/* Ajuste para el contenido cuando la barra sticky está visible */
+.sticky-spacer {
+  display: none;
+  /* Ocultar el spacer, usaremos padding en body */
+}
+
+.sticky-spacer.active {
+  display: block;
+  height: 60px;
+}
+
+/* OPCIONAL: Si prefieres usar padding en lugar del spacer */
+body.sticky-bar-active {
+  padding-top: 60px !important;
+  transition: padding-top 0.3s ease;
+}
+
+/* Responsive para la barra sticky */
+@media (max-width: 768px) {
+  .sticky-purchase-bar.active {
+    top: 0;
+    /* ¡Cambiado de 60px a 0! */
+  }
+
+  .sticky-container {
+    padding: 0 16px;
+    gap: 12px;
+  }
+
+  .sticky-game-title {
+    font-size: 16px;
+  }
+
+  .sticky-price {
+    font-size: 20px;
+  }
+
+  .sticky-add-to-cart-btn {
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+
+  .sticky-edition-price {
+    gap: 2px;
+  }
+
+  .sticky-edition {
+    font-size: 12px;
+  }
+
+  .sticky-platform-badge {
+    font-size: 10px;
+    padding: 3px 6px;
+  }
+
+  .sticky-spacer.active {
+    height: 55px;
+    /* Menor en móvil */
+  }
+}
+
+@media (max-width: 480px) {
+  .sticky-purchase-bar.active {
+    top: 60px;
+  }
+
+  .sticky-container {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .sticky-game-info {
+    flex-basis: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .sticky-price-info {
+    order: 2;
+  }
+
+  .sticky-add-to-cart-btn {
+    order: 3;
   }
 }
