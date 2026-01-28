@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: #f8f8f8;
+  background-color: #ffffff;
   color: #333;
   line-height: 1.6;
 }
@@ -2153,4 +2153,29 @@ body.sticky-bar-active {
     width: 100%;
     justify-content: center;
   }
+}
+
+/* ===== LEGAL TEXT ONLY (LIKE THE IMAGE) ===== */
+.legal-text-plain {
+  padding: 0 20px;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #666;
+  text-align: left;
+  margin-left: 19px;
+  margin-right: 136px;
+}
+
+.legal-text-plain p {
+  margin: 15px 0;
+}
+
+.legal-text-plain a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+.legal-text-plain a:hover {
+  text-decoration: underline;
 }
