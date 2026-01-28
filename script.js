@@ -487,4 +487,14 @@ document.addEventListener('DOMContentLoaded', function () {
       initCarousel();
     });
   }
+}); const heart = document.querySelector('.heart-icon-prize');
+
+heart.addEventListener('click', function (e) {
+  e.preventDefault(); // Evita que el enlace recargue la página
+  const icon = this.querySelector('i');
+
+  // Alternar entre contorno y relleno
+  icon.classList.toggle('far'); // contorno
+  icon.classList.toggle('fas'); // relleno
+  this.classList.toggle('active'); // cambia color
 });
