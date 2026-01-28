@@ -569,3 +569,23 @@ if (stickyBar && addToCartBtn && purchaseSection && navbar && stickySpacer) {
   // Inicializar verificación
   checkStickyBar();
 }
+
+// ===== READ MORE / READ LESS FUNCTIONALITY =====
+const readMoreBtn = document.getElementById('readMoreBtn');
+const multiplayerText = document.getElementById('multiplayerText');
+
+if (readMoreBtn && multiplayerText) {
+  readMoreBtn.addEventListener('click', function () {
+    // Toggle the expanded class
+    multiplayerText.classList.toggle('expanded');
+    this.classList.toggle('expanded');
+
+    // Optional: Smooth scroll to keep button in view
+    if (multiplayerText.classList.contains('expanded')) {
+      multiplayerText.scrollIntoView({
+        behavior: 'smooth',
+        block: 'nearest'
+      });
+    }
+  });
+}

@@ -2032,3 +2032,267 @@ body.sticky-bar-active {
     order: 3;
   }
 }
+
+/* ===== GAME STORY SECTION ===== */
+.game-story-section {
+  max-width: 1200px;
+  margin: 60px auto 40px;
+  padding: 0 50px;
+}
+
+.story-container {
+  background: white;
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.story-title {
+  font-size: 32px;
+  color: #333;
+  margin-bottom: 25px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.story-content-wrapper {
+  display: flex;
+  gap: 50px;
+  align-items: flex-start;
+}
+
+.story-text-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.story-text p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.story-text strong {
+  color: #e60012;
+  font-weight: 700;
+}
+
+.multiplayer-text {
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+  margin-top: 10px;
+}
+
+.multiplayer-text.expanded {
+  max-height: 200px;
+  opacity: 1;
+}
+
+.read-more-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: none;
+  color: #e60012;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 8px 0;
+  margin: -10px 0 7px;
+  transition: all 0.3s;
+  position: relative;
+}
+
+.read-more-btn:hover {
+  color: #cc0010;
+  transform: translateY(-2px);
+}
+
+.read-more-btn .read-less-text {
+  display: none;
+}
+
+.read-more-btn.expanded .read-more-text {
+  display: none;
+}
+
+.read-more-btn.expanded .read-less-text {
+  display: inline;
+}
+
+.read-more-btn .read-icon {
+  transition: transform 0.3s ease;
+  font-size: 14px;
+}
+
+.read-more-btn.expanded .read-icon {
+  transform: rotate(180deg);
+}
+
+/* Publisher Info */
+
+.publisher-text {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 20px;
+}
+
+.official-website-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: red;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 14px 28px;
+  border-radius: 10px;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.official-website-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+}
+
+.official-website-btn:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+}
+
+.official-website-btn:hover::before {
+  left: 100%;
+}
+
+.official-website-btn i {
+  font-size: 14px;
+  transition: transform 0.3s;
+}
+
+.official-website-btn:hover i {
+  transform: translateX(4px);
+}
+
+/* Story Image */
+.story-image {
+  flex: 1;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  min-width: 350px;
+  position: relative;
+}
+
+.story-image::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, transparent 70%, rgba(0, 0, 0, 0.1));
+  pointer-events: none;
+}
+
+.story-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.story-image:hover img {
+  transform: scale(1.05);
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 1100px) {
+  .story-content-wrapper {
+    gap: 40px;
+  }
+
+  .story-image {
+    min-width: 300px;
+  }
+}
+
+@media (max-width: 900px) {
+  .story-content-wrapper {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .story-image {
+    width: 100%;
+    min-width: unset;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .story-container {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .game-story-section {
+    margin: 40px auto 30px;
+    padding: 0 16px;
+  }
+
+  .story-container {
+    padding: 25px;
+  }
+
+  .story-title {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  .story-text p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .official-website-btn {
+    padding: 12px 24px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .story-container {
+    padding: 20px;
+  }
+
+  .story-title {
+    font-size: 24px;
+  }
+
+  .story-text p {
+    font-size: 14px;
+  }
+
+  .publisher-info {
+    margin-top: 25px;
+    padding-top: 20px;
+  }
+
+  .official-website-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
