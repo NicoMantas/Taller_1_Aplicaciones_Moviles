@@ -2551,3 +2551,71 @@ body.sticky-bar-active {
     padding-left: 0;
   }
 }
+/* ===== Nintendo Footer ===== */
+
+.nintendo-footer {
+    background: #fff;
+    border-top: 1px solid #e5e5e5;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+.footer-top {
+    background: #e60012;
+    padding: 24px 0;
+    text-align: center;
+}
+
+.footer-logo {
+    color: #fff;
+    font-weight: 700;
+    font-size: 22px;
+}
+
+.footer-links {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 48px 24px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 32px;
+}
+
+.footer-column h4 {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: #000;
+}
+
+.footer-column a {
+    display: inline-block;
+    position: relative;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #e60012;
+    text-decoration: none;
+}
+
+/* ===== Hover EXACTO (línea roja animada) ===== */
+.footer-column a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background-color: #e60012;
+    transition: width 0.2s ease;
+}
+
+.footer-column a:hover::after {
+    width: 100%;
+}
+
+.footer-bottom {
+    background: #2d2d2d;
+    color: #aaa;
+    font-size: 12px;
+    padding: 16px 24px;
+    text-align: center;
+}
